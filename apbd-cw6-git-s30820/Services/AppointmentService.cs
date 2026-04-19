@@ -184,9 +184,6 @@ public class AppointmentService
         if (string.IsNullOrWhiteSpace(dto.Reason) || dto.Reason.Length > 250)
             return (false, "Reason is required and must be at most 250 characters.", false, false);
 
-        if (dto.AppointmentDate <= DateTime.UtcNow)
-            return (false, "Appointment date must be in the future.", false, false);
-
         await using var connection = new SqlConnection(_connectionString);
         await connection.OpenAsync();
 
