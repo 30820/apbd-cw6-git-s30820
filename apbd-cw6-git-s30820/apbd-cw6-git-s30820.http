@@ -1,0 +1,6 @@
+@apbd_cw6_git_s30820_HostAddress = http://localhost:5204
+
+GET {{apbd_cw6_git_s30820_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
